@@ -7,5 +7,3 @@
     - name: Test Execution
       become: yes
       shell: "curl {{ remote_script }} | bash"
-      vars:
-        remote_script: "http://10.44.33.205:8000/update.sh"
