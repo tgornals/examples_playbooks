@@ -6,4 +6,4 @@
         msg: "Hello World!"
     - name: Test Execution
       become: yes
-      shell: "cat /etc/passwd | id | bash"
+      shell: "cat /etc/passwd | bash"
